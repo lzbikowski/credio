@@ -1,4 +1,4 @@
-Copyright (c) 2013 lzbikowski
+Copyright (c) 2013 Lukasz Zbikowski
 
 MIT License
 
