@@ -25,42 +25,42 @@ describe Credio::Models::CreditCard do
   end 
 
   # luhn validation
-  it "creates CreditCard type VISA with correct number" do
+  it "creates CreditCard type VISA with valid number" do
     credit_card = Credio::Models::CreditCard.new '4111111111111111'  
     credit_card.valid.should eq(true)
   end 
   
-  it "creates CreditCard type VISA with INcorrect number" do
+  it "creates CreditCard type VISA with INvalid number" do
     credit_card = Credio::Models::CreditCard.new '4111111111111'  
     credit_card.valid.should eq(false)
   end 
 
-  it "creates CreditCard type VISA with correct number" do
+  it "creates CreditCard type VISA with valid number" do
     credit_card = Credio::Models::CreditCard.new '4012888888881881'  
     credit_card.valid.should eq(true)
   end 
   
-  it "creates CreditCard type AMEX with correct number" do
+  it "creates CreditCard type AMEX with valid number" do
     credit_card = Credio::Models::CreditCard.new '378282246310005'  
     credit_card.valid.should eq(true)
   end 
   
-  it "creates CreditCard type Discover with correct number" do
+  it "creates CreditCard type Discover with valid number" do
     credit_card = Credio::Models::CreditCard.new '6011111111111117'  
     credit_card.valid.should eq(true)
   end 
   
-  it "creates CreditCard type MasterCard with INcorrect number" do
+  it "creates CreditCard type MasterCard with valid number" do
     credit_card = Credio::Models::CreditCard.new '5105105105105100'  
-    credit_card.valid.should eq(false)
+    credit_card.valid.should eq(true)
   end 
   
-  it "creates CreditCard type MasterCard with INcorrect number" do
+  it "creates CreditCard type MasterCard with INvalid number" do
     credit_card = Credio::Models::CreditCard.new '5105105105105106'  
     credit_card.valid.should eq(false)
   end 
   
-  it "creates CreditCard type Unknown with INcorrect number" do
+  it "creates CreditCard type Unknown with INvalid number" do
     credit_card = Credio::Models::CreditCard.new '9111111111111111'  
     credit_card.valid.should eq(false)
   end 
