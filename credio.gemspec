@@ -6,14 +6,18 @@ require 'credio/version'
 Gem::Specification.new do |gem|
   gem.name          = "credio"
   gem.version       = Credio::VERSION
-  gem.authors       = ["lzbikowski"]
-  gem.email         = ["luke.zbikowski@intecco.com.au"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.authors       = ["Luke Zbikowski"]
+  gem.email         = ["l.zbikowski@gmail.com"]
+  gem.description   = %q{Support for multpile credit cards validation}
+  gem.summary       = %q{Validates credit card numbers. Currently support AMEX, Discover, MasterCard and Visa numbers}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
+  
+  
+  gem.add_development_dependency 'rspec'
+  gem.add_development_dependency 'rake'
 end
