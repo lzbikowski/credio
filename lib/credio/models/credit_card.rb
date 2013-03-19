@@ -1,7 +1,7 @@
 module Credio
   module Models
     class CreditCard
-      attr_accessor :number, :type, :valid 
+      attr_reader :number, :type, :valid 
               
       def initialize number
           @number = number.delete(' ') # translate to no-white-spaces format
