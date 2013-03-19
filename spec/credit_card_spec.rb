@@ -64,5 +64,16 @@ describe Credio::Models::CreditCard do
     credit_card = Credio::Models::CreditCard.new '9111111111111111'  
     credit_card.valid.should eq(false)
   end 
+  
+  # format variations
+  it "creates valid CreditCard from number with white-spaces" do
+    credit_card = Credio::Models::CreditCard.new '5105 1051 0510 5100'  
+    credit_card.valid.should eq(true)
+  end
+
+  it "creates unknown CreditCard from number with incorrect signs" do # for validation letters are treated as 0, so neutral for luhn   
+    credit_card = Credio::Models::CreditCard.new '5105 1051 0510 510f'  
+    credit_card.type.downcase.should eq('unknown')
+  end
 
 end
