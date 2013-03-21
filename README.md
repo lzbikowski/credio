@@ -39,6 +39,7 @@ During intialization it performs card validation::
 +------------+-------------+---------------+
 
 all others are marked as unknown.
+
 2. Luhn formula verification.
 
 
