@@ -11,7 +11,7 @@ Add this line to your application's Gemfile:
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
@@ -21,27 +21,9 @@ Or install it yourself as:
 
 CreditCard gets number creating CreditCard object. 
 
-During intialization it performs card validation::
-
-1. Match to the following pattern
-
-
-+============+=============+===============+
-| Card Type  | Begins With | Number Length |
-+============+=============+===============+
-| AMEX       | 34 or 37    | 15            |
-+------------+-------------+---------------+
-| Discover   | 6011        | 16            |
-+------------+-------------+---------------+
-| MasterCard | 51-55       | 16            |
-+------------+-------------+---------------+
-| Visa       | 4           | 13 or 16      |
-+------------+-------------+---------------+
-
-all others are marked as unknown.
+During intialization it performs card validation for AMEX, Discover, Mastercard and Visa all others are marked as unknown.
 
 2. Luhn formula verification.
-
 
 
 You can execute script with sample data using the console script: 
