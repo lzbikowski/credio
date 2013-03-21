@@ -24,6 +24,8 @@ CreditCard gets number creating CreditCard object.
 During intialization it performs card validation::
 
 1. Match to the following pattern
+
+
 +============+=============+===============+
 | Card Type  | Begins With | Number Length |
 +============+=============+===============+
